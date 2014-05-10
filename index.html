@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow Manager - Organize Your Tasks</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1><i class="fa fa-tasks"></i> TaskFlow Manager</h1>
+            <p>Stay organized and productive</p>
+        </header>
+
+        <div class="task-input-section">
+            <div class="input-container">
+                <input type="text" id="taskInput" placeholder="Add a new task..." maxlength="100">
+                <select id="prioritySelect">
+                    <option value="low">Low Priority</option>
+                    <option value="medium" selected>Medium Priority</option>
+                    <option value="high">High Priority</option>
+                </select>
+                <button id="addTaskBtn"><i class="fa fa-plus"></i> Add Task</button>
+            </div>
+        </div>
+
+        <div class="filter-section">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All Tasks</button>
+                <button class="filter-btn" data-filter="pending">Pending</button>
+                <button class="filter-btn" data-filter="completed">Completed</button>
+            </div>
+            <div class="task-stats">
+                <span id="totalTasks">0</span> total, 
+                <span id="pendingTasks">0</span> pending, 
+                <span id="completedTasks">0</span> completed
+            </div>
+        </div>
+
+        <div class="task-list-container">
+            <ul id="taskList" class="task-list">
+                <!-- Tasks will be dynamically added here -->
+            </ul>
+            <div id="emptyState" class="empty-state">
+                <i class="fa fa-clipboard"></i>
+                <h3>No tasks yet</h3>
+                <p>Add your first task to get started!</p>
+            </div>
+        </div>
+
+        <div class="actions-section">
+            <button id="clearCompletedBtn" class="action-btn">
+                <i class="fa fa-trash"></i> Clear Completed
+            </button>
+            <button id="clearAllBtn" class="action-btn danger">
+                <i class="fa fa-times"></i> Clear All
+            </button>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2014 TaskFlow Manager. Built with vanilla JavaScript.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
