@@ -199,6 +199,19 @@ $(document).ready(function() {
         return div.innerHTML;
     }
 
+    // Keyboard shortcuts
+    $(document).keydown(function(e) {
+        // Ctrl/Cmd + Enter to add task
+        if ((e.ctrlKey || e.metaKey) && e.which === 13) {
+            addTask();
+        }
+
+        // Escape to clear input
+        if (e.which === 27) {
+            $('#taskInput').val('').focus();
+        }
+    });
+
     // Add some sample tasks for demo
     if (tasks.length === 0) {
         const sampleTasks = [
@@ -206,7 +219,7 @@ $(document).ready(function() {
             { id: 2, text: 'Review code changes', priority: 'medium', completed: true, createdAt: new Date().toISOString() },
             { id: 3, text: 'Update website content', priority: 'low', completed: false, createdAt: new Date().toISOString() }
         ];
-        
+
         tasks = sampleTasks;
         saveTasks();
         renderTasks();
