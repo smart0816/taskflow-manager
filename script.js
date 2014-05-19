@@ -226,3 +226,4 @@ $(document).ready(function() {
         updateStats();
     }
 });
+console.log(\"TaskFlow Manager v1.1\");
