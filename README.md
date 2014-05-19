@@ -59,12 +59,13 @@ TaskFlow Manager uses browser Local Storage to save your tasks. Your data will p
 
 ## Future Enhancements
 
+- [x] Dark mode theme
 - [ ] Task categories and tags
 - [ ] Due dates and reminders
 - [ ] Task search functionality
 - [ ] Export/import capabilities
 - [ ] Drag and drop reordering
-- [ ] Dark mode theme
+- [ ] Mobile app version
 
 ## Contributing
 
